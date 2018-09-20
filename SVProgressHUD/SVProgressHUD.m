@@ -1356,7 +1356,7 @@ static const CGFloat SVProgressHUDLabelSpacing = 8.0f;
 }
     
 - (void)fadeInEffects {
-    if(self.defaultStyle != SVProgressHUDStyleCustom) {
+//    if(self.defaultStyle != SVProgressHUDStyleCustom) {
         // Add blur effect
         UIBlurEffectStyle blurEffectStyle = self.defaultStyle == SVProgressHUDStyleDark ? UIBlurEffectStyleDark : UIBlurEffectStyleLight;
         UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:blurEffectStyle];
@@ -1367,9 +1367,9 @@ static const CGFloat SVProgressHUDLabelSpacing = 8.0f;
         // https://www.omnigroup.com/developer/how-to-make-text-in-a-uivisualeffectview-readable-on-any-background
         
         self.hudView.backgroundColor = [self.backgroundColorForStyle colorWithAlphaComponent:0.6f];
-    } else {
-        self.hudView.backgroundColor =  self.backgroundColorForStyle;
-    }
+//    } else {
+//        self.hudView.backgroundColor =  self.backgroundColorForStyle;
+//    }
 
     // Fade in views
     self.backgroundView.alpha = 1.0f;
@@ -1382,10 +1382,10 @@ static const CGFloat SVProgressHUDLabelSpacing = 8.0f;
 
 - (void)fadeOutEffects
 {
-    if(self.defaultStyle != SVProgressHUDStyleCustom) {
+//    if(self.defaultStyle != SVProgressHUDStyleCustom) {
         // Remove blur effect
         self.hudView.effect = nil;
-    }
+//    }
 
     // Remove background color
     self.hudView.backgroundColor = [UIColor clearColor];
